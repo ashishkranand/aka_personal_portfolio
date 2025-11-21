@@ -1,341 +1,1047 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashish Kumar Anand | Assistant Professor</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#landing">Ashish Kumar Anand</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#research">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#courses">Courses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;600;700&family=Share+Tech+Mono&display=swap');
 
-    <section id="landing" class="d-flex align-items-center text-center">
-      <div class="container">
-        <div data-aos="zoom-in">
-          <h1 class="display-3">Ashish Kumar Anand</h1>
-          <h2 class="lead">
-            Assistant Professor | Computer Science & Engineering
-          </h2>
-          <h3 class="lead mb-4">Parul University, Vadodara</h3>
-          <a
-            href="https://drive.google.com/file/d/1EEBLkNos-5XcvthlrJCRYN2gqbeo7KAx/view?usp=sharing"
-            class="btn btn-primary me-2"
-            >Download Resume</a
-          >
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
-        </div>
-        <div class="scroll-down">
-          <a href="#about"><i class="fas fa-chevron-down"></i></a>
-        </div>
-      </div>
-    </section>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-orange: #ff9e00;
+            --neon-purple: #bc13fe;
+            --glass-bg: rgba(0, 10, 20, 0.90);
+            --border: rgba(0, 243, 255, 0.3);
+        }
 
-    <section id="about" class="d-flex align-items-center">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5" data-aos="slide-right">
-            <img
-              src="./photo.jpg"
-              alt="Ashish Kumar Anand"
-              class="img-fluid  shadow-lg"
-            />
-          </div>
-          <div class="col-md-7" data-aos="slide-left">
-            <h2 class="section-title">About Me</h2>
-            <p class="lead">
-              I am a passionate educator and developer with a background in
-              computer science. I enjoy mentoring students, solving real-world
-              problems, and staying up to date with emerging technologies.
-            </p>
-            <p>
-              My teaching philosophy emphasizes clarity, practicality, and
-              student engagement. I aim to empower learners with strong
-              fundamentals and hands-on experience.
-            </p>
-            <p>
-              I specialize in Java, PHP (Laravel), and database systems, and I’m
-              interested in web development and data-driven application design.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <section id="education" class="d-flex align-items-center">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-up">Education</h2>
-        <div class="timeline">
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-content">
-              <h5>MCA - Lovely Professional University, Punjab</h5>
-              <p>2023</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="timeline-content">
-              <h5>BCA - Bhupendra Narayan Mandal University, Bihar</h5>
-              <p>2020</p>
-            </div>
-          </div>
-           <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="timeline-content">
-              <h5>XII<sup>th</sup> - Bihar School Examination Board, Bihar</h5>
-              <p>2017</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="timeline-content">
-              <h5>X<sup>th</sup> - Bihar School Examination Board, Bihar</h5>
-              <p>2015</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        body {
+            background-color: #000;
+            overflow: hidden;
+            font-family: 'Rajdhani', sans-serif;
+            color: white;
+            height: 100vh;
+            width: 100vw;
+        }
 
-    <section id="experience" class="d-flex align-items-center">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-down">
-          Experience
-        </h2>
-        <div class="row text-center">
-          <div class="col-md-6 expclass" data-aos="fade-right">
-            <div class="exp-card">
-              <i class="fas fa-chalkboard-teacher fa-3x mb-3"></i>
-              <h4>Assistant Professor</h4>
-              <p>Parul University | March 2024 – Present</p>
-              <ul>
-                <li>Teaching Java, DBMS, and PHP to undergraduate students</li>
-                <li>Coordinating academic activities and projects</li>
-                <li>
-                  Guiding students in practical and project-based learning
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 expclass" data-aos="fade-left">
-            <div class="exp-card">
-              <i class="fas fa-chalkboard fa-3x mb-3"></i>
-              <h4>Assistant Professor</h4>
-              <p>Mandsaur University | August 2023 – February 2024</p>
-              <ul>
-                <li>Handled core programming subjects and database systems</li>
-                <li>Organized coding bootcamps and student workshops</li>
-                <li>Worked on student performance improvement initiatives</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        /* --- 3D CANVAS --- */
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
 
-    <section id="research" class="d-flex align-items-center">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="zoom-in-up">
-          Research & Publications
-        </h2>
-        <div class="text-center" data-aos="fade-up">
-          <p>performance optimization techniques in asp .net core application</p>
-        </div>
-      </div>
-    </section>
+        /* --- UI OVERLAY --- */
+        .ui-layer {
+            position: absolute;
+            z-index: 10;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    <section id="courses" class="d-flex align-items-center">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-in">
-          Courses Taught
-        </h2>
-        <div class="row">
-          <div class="col-md-3" data-aos="flip-left" data-aos-delay="100">
-            <div class="course-card">
-              <h4>Java Programming</h4>
-            </div>
-          </div>
-          <div class="col-md-3" data-aos="flip-left" data-aos-delay="200">
-            <div class="course-card">
-              <h4>Database Management System</h4>
-            </div>
-          </div>
-          <div class="col-md-3" data-aos="flip-left" data-aos-delay="300">
-            <div class="course-card">
-              <h4>Web Dev (PHP/Laravel)</h4>
-            </div>
-          </div>
-          <div class="col-md-3" data-aos="flip-left" data-aos-delay="400">
-            <div class="course-card">
-              <h4>Programming in C</h4>
-            </div>
-          </div>
-          <div class="col-md-3" data-aos="flip-left" data-aos-delay="400">
-            <div class="course-card">
-              <h4>Deep learning</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        header {
+            pointer-events: auto;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
 
-    <section id="skills" class="d-flex align-items-center">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-down">Skills</h2>
-        <div class="row">
-          <div class="col-md-6" data-aos="zoom-in-right">
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>PHP (Laravel)</span><span>90%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>Java</span><span>85%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>Python</span><span>80%</span>
-             </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 80%"></div>
-              </div>
-            </div> 
-            
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>HTML/CSS/JS</span><span>90%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 90%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="zoom-in-left">
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>DBMS</span><span>95%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 95%"></div>
-              </div>
-            </div>
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>C/C++</span><span>85%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>Machine Learning</span><span>75%</span>
-             </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 75%"></div>
-              </div>
-            </div> 
-            <div class="skill mb-4">
-              <div class="d-flex justify-content-between">
-                <span>Communication</span><span>98%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 98%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    <section id="contact" class="d-flex align-items-center">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-up">Contact</h2>
-        <div class="row">
-          <div class="col text-center" data-aos="fade-left">
-            <p>
-              Email:
-              <a href="mailto:ashishraj5296@gmail.com"
-                >ashishraj5296@gmail.com</a
-              >
-            </p>
-            <p>Phone: +91-8434463000</p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/akanand0125/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://www.instagram.com/akanand0125" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://twitter.com/akanand0125" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        h1 span {
+            color: var(--neon-blue);
+        }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000, once: true });
+        .subtitle {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--neon-orange);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .instructions {
+            text-align: center;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            animation: pulse 2s infinite;
+            position: absolute;
+            bottom: 2rem;
+            width: 100%;
+            left: 0;
+        }
+
+        /* --- MODALS --- */
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .holo-card {
+            width: 90%;
+            max-width: 900px;
+            max-height: 85vh;
+            background: var(--glass-bg);
+            border: 1px solid var(--border);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.5);
+            padding: 3rem;
+            position: relative;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 4px;
+        }
+
+        .modal-overlay.active .holo-card {
+            transform: scale(1);
+        }
+
+        /* Scrollbar Styling */
+        .holo-card::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .holo-card::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .holo-card::-webkit-scrollbar-thumb {
+            background: var(--neon-blue);
+            border-radius: 3px;
+        }
+
+        /* UI Decoration */
+        .corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--neon-blue);
+            transition: 0.3s;
+        }
+
+        .tl {
+            top: 0;
+            left: 0;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        .tr {
+            top: 0;
+            right: 0;
+            border-left: 0;
+            border-bottom: 0;
+        }
+
+        .bl {
+            bottom: 0;
+            left: 0;
+            border-right: 0;
+            border-top: 0;
+        }
+
+        .br {
+            bottom: 0;
+            right: 0;
+            border-left: 0;
+            border-top: 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 30;
+            transition: 0.3s;
+        }
+
+        .close-btn:hover {
+            color: var(--neon-orange);
+            transform: rotate(90deg);
+        }
+
+        /* Content Styles */
+        .holo-header {
+            display: flex;
+            align-items: flex-end;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .holo-title {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        /* Profile Image Styling */
+        .profile-container {
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .profile-img-box {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border: 2px solid var(--neon-orange);
+            padding: 5px;
+            position: relative;
+            background: rgba(255, 158, 0, 0.1);
+        }
+
+        .profile-img-box::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 2px solid var(--neon-orange);
+            border-right: 2px solid var(--neon-orange);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%) contrast(1.2);
+        }
+
+        .holo-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: var(--neon-orange);
+            font-weight: bold;
+        }
+
+        /* Lists & Grids */
+        .timeline-item {
+            border-left: 2px solid var(--neon-purple);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--neon-purple);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-purple);
+        }
+
+        .timeline-year {
+            font-family: 'Share Tech Mono';
+            color: var(--neon-purple);
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-role {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .timeline-org {
+            color: #aaa;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-pill {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--neon-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-family: 'Share Tech Mono';
+            font-size: 0.9rem;
+            color: var(--neon-blue);
+            transition: 0.3s;
+        }
+
+        .skill-pill:hover {
+            background: var(--neon-blue);
+            color: black;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .hobby-card {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .hobby-card:hover {
+            border-color: var(--neon-orange);
+            transform: translateY(-5px);
+        }
+
+        .hobby-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Contact Form */
+        .contact-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #444;
+            color: white;
+            font-family: 'Share Tech Mono';
+        }
+
+        .form-input:focus {
+            border-color: var(--neon-blue);
+            outline: none;
+        }
+
+        .btn-submit {
+            background: var(--neon-blue);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Rajdhani';
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--neon-blue);
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .ui-layer {
+                padding: 1.5rem;
+            }
+
+            .holo-card {
+                padding: 1.5rem;
+                width: 95%;
+                max-height: 90vh;
+            }
+
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-img-box {
+                margin-bottom: 1rem;
+            }
+
+            .contact-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Adjust 3D Touch Hint */
+            .instructions {
+                bottom: 5rem;
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <div
+            style="width: 60px; height: 60px; border: 4px solid var(--neon-blue); border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;">
+        </div>
+        <div style="margin-top: 20px; font-family: 'Share Tech Mono'; color: var(--neon-blue);">WELCOME TO THE WORLD OF
+            ASHISH KUMAR ANAND
+        </div>
+    </div>
+
+    <!-- 3D CANVAS -->
+    <div id="canvas-container"></div>
+
+    <!-- HEADER UI -->
+    <div class="ui-layer">
+        <header>
+            <h1>Ashish Kumar<span>.</span>Anand</h1>
+            <div class="subtitle">ASSISTANT PROFESSOR // SCHOOL OF COMPUTER APPLICATION</div>
+        </header>
+
+        <div class="instructions">
+            &lt; DRAG TO ROTATE • TAP NODES TO OPEN &gt;
+        </div>
+    </div>
+
+    <!-- === MODALS === -->
+
+    <!-- 1. PROFILE -->
+    <div class="modal-overlay" id="modal-profile">
+        <div class="holo-card">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <div class="holo-header">
+                <h2 class="holo-title">Bio_Data</h2>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-img-box">
+                    <!-- Placeholder Image: Replace src with your actual photo URL -->
+                    <img src="./photo.jpg" alt="Ashish Anand" class="profile-img">
+                </div>
+                <div class="holo-content">
+                    <p>Hello, I am <span class="highlight">Ashish Kumar Anand</span>. I currently serve as an Assistant
+                        Professor at <span class="highlight">Lovely Professional University (LPU)</span> in the School
+                        of Computer Application.</p>
+                    <p>My academic journey is fueled by a passion for <strong>Programming</strong>, <strong>Web
+                            Development</strong>, and bridging the gap between theoretical computer science and
+                        real-world
+                        implementations.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <small style="color: #888; font-family: 'Share Tech Mono';">LOCATION: Phagwara, Punjab,
+                            India</small><br>
+                        <small style="color: #888; font-family: 'Share Tech Mono';">STATUS: Working on Ph.D.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. EDUCATION -->
+    <div class="modal-overlay" id="modal-education">
+        <div class="holo-card">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <h2 class="holo-title">Education</h2>
+            <div class="holo-content">
+                <div class="timeline-item">
+                    <div class="timeline-year">2026 - Present</div>
+                    <div class="timeline-role">PHD</div>
+                    <div class="timeline-org">Lovely Professional University (Punjab)</div>
+                    <p>Working on</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2021 - 2023</div>
+                    <div class="timeline-role">Master of Computer Application (BCA)</div>
+                    <div class="timeline-org">Lovely Professional University (Punjab)</div>
+                    <p>Specialization in Full Stack Web Development</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2017 - 2020</div>
+                    <div class="timeline-role">Bachelor of Computer Applications (BCA)</div>
+                    <div class="timeline-org">B.N.Mandal University (Bihar)</div>
+                    <p>Focus on Web Development and Software Engineering.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2015 - 2017</div>
+                    <div class="timeline-role">Intermediate</div>
+                    <div class="timeline-org">BSEB</div>
+                    <p>Learned all the core concept</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2014 - 2015</div>
+                    <div class="timeline-role">Matric</div>
+                    <div class="timeline-org">BSEB</div>
+                    <p>Learned all the core concept</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. EXPERIENCE -->
+    <div class="modal-overlay" id="modal-experience">
+        <div class="holo-card">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <h2 class="holo-title">Experience</h2>
+            <div class="holo-content">
+                <div class="timeline-item">
+                    <div class="timeline-year">CURRENT</div>
+                    <div class="timeline-role">Assistant Professor</div>
+                    <div class="timeline-org">School of Computer Application, LPU</div>
+                    <p>Delivering lectures on Deep Learning an Programming in C. Mentoring postgraduate and graduate
+                        students</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2023-2025</div>
+                    <div class="timeline-role">Assistant Professor</div>
+                    <div class="timeline-org">Diploma Studies, Parul University</div>
+                    <p>Worked as an Assistant professor in Diploma studies at Parul university</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. SKILLS -->
+    <div class="modal-overlay" id="modal-skills">
+        <div class="holo-card">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <h2 class="holo-title">Technical Skills</h2>
+            <div class="holo-content">
+                <h3 style="color:white; margin-bottom:1rem;">Core Competencies</h3>
+                <div class="skills-grid">
+                    <div class="skill-pill">C</div>
+                    <div class="skill-pill">C++</div>
+                    <div class="skill-pill">Java</div>
+                    <div class="skill-pill">Python</div>
+                    <div class="skill-pill">DBMS</div>
+                    <div class="skill-pill">HTML</div>
+                    <div class="skill-pill">CSS</div>
+                    <div class="skill-pill">JS</div>
+                    <div class="skill-pill">Machine Learning</div>
+                    <div class="skill-pill">Deep Learning</div>
+                </div>
+
+                <h3 style="color:white; margin: 2rem 0 1rem;">Programming Tools/Editors</h3>
+                <div class="skills-grid">
+                    <div class="skill-pill">VS Code</div>
+                    <div class="skill-pill">Apache Nebeans</div>
+                    <div class="skill-pill">Jupyter</div>
+                    <div class="skill-pill">Collab</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. RESEARCH -->
+    <div class="modal-overlay" id="modal-research">
+        <div class="holo-card">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <h2 class="holo-title">Research</h2>
+            <div class="holo-content">
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color:white;">Artificial Intelligence in Local Governance: Opportunities and Challenges
+                        for Smart Self-Government</h3>
+                    <div class="timeline-year">2025 • SCOPUS - Q2</div>
+                    <p>Using artifical interllignce , published research paper on scopus indexed on Q2</p>
+                </div>
+
+
+
+                <!-- <a href="https://dblp.org/pid/02/1142.html" target="_blank" class="skill-pill"
+                    style="text-decoration: none; display: inline-block;">VIEW DBLP PROFILE</a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. HOBBIES -->
+    <div class="modal-overlay" id="modal-hobbies">
+        <div class="holo-card">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <h2 class="holo-title">Interests & Hobbies</h2>
+            <div class="holo-content">
+                <div class="hobby-grid">
+                    <div class="hobby-card">
+                        <span class="hobby-icon">📚</span>
+                        <div style="color: white; font-weight: bold;">Reading</div>
+                        <small style="color: #888;">Tech Blogs , Research Papers and Novels</small>
+                    </div>
+                    <div class="hobby-card">
+                        <span class="hobby-icon">✈️</span>
+                        <div style="color: white; font-weight: bold;">Traveling</div>
+                        <small style="color: #888;">Exploring new cultures</small>
+                    </div>
+                    <div class="hobby-card">
+                        <span class="hobby-icon">💻</span>
+                        <div style="color: white; font-weight: bold;">Coding</div>
+                        <small style="color: #888;">Open Source Contribution</small>
+                    </div>
+                    <div class="hobby-card">
+                        <span class="hobby-icon">🎬</span>
+                        <div style="color: white; font-weight: bold;">Watching Movies</div>
+                        <small style="color: #888;">Historical Moviee</small>
+                    </div>
+                    <div class="hobby-card">
+                        <span class="hobby-icon">🎵</span>
+                        <div style="color: white; font-weight: bold;">Listening Music</div>
+                        <small style="color: #888;">80's-90's</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. CONTACT -->
+    <div class="modal-overlay" id="modal-contact">
+        <div class="holo-card">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <h2 class="holo-title">Contact Link</h2>
+            <div class="holo-content">
+                <div class="contact-row">
+                    <div class="contact-links">
+                        <p>Connect with me for research collaborations or academic queries.</p>
+
+                        <a href="https://www.linkedin.com/in/ashishkranand" target="_blank">
+                            <span style="color:var(--neon-blue);">LINKEDIN</span>
+                            linkedin.com/in/ashishkranand
+                        </a>
+                        <a href="mailto:ashish.anand@lpu.co.in">
+                            <span style="color:var(--neon-orange);">EMAIL</span>
+                            ashishraj5296@gmail.com
+                        </a>
+                        <a href="mailto:ashish.anand@lpu.co.in">
+                            <span style="color:var(--neon-blue);">Phone</span>
+                            +91-8434463000
+                        </a>
+                        <a href="https://www.lpu.in" target="_blank">
+                            <span style="color:var(--neon-purple);">OFFICE</span>
+                            Lovely Professional University, Punjab
+                        </a>
+                    </div>
+
+                    <div class="contact-form">
+                        <form
+                            onsubmit="event.preventDefault(); alert('Message simulated! In a real site, this would email you.');">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-input" rows="4" placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Transmit Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "gsap": "https://unpkg.com/gsap@3.12.5/index.js"
+            }
+        }
     </script>
-  </body>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { gsap } from 'gsap';
+
+        // --- CONFIGURATION ---
+        const SCENE_CONFIG = {
+            bg: 0x000000,
+            coreColor: 0x00f3ff,
+        };
+
+        // --- SETUP ---
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x000000, 0.02);
+
+        const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        // Mobile Adjustments for Camera
+        const isMobile = window.innerWidth < 768;
+        camera.position.z = isMobile ? 22 : 15; // Zoom out on mobile
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
+
+        // --- LIGHTING ---
+        const ambientLight = new THREE.AmbientLight(0x404040, 2);
+        scene.add(ambientLight);
+
+        const pointLight = new THREE.PointLight(SCENE_CONFIG.coreColor, 2, 50);
+        pointLight.position.set(0, 0, 0);
+        scene.add(pointLight);
+
+        // --- OBJECTS ---
+
+        // 1. The Core (Ashish)
+        const coreGroup = new THREE.Group();
+        const geoCore = new THREE.IcosahedronGeometry(1.5, 1);
+        const matCore = new THREE.MeshBasicMaterial({
+            color: SCENE_CONFIG.coreColor,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.3
+        });
+        coreGroup.add(new THREE.Mesh(geoCore, matCore));
+        coreGroup.add(new THREE.Mesh(new THREE.SphereGeometry(1, 16, 16), new THREE.MeshBasicMaterial({ color: 0x000000 })));
+        scene.add(coreGroup);
+
+        // 2. Orbiting Nodes (7 Sections)
+        const nodesGroup = new THREE.Group();
+        scene.add(nodesGroup);
+
+        const nodeData = [
+            { id: 'profile', label: 'PROFILE', color: '#00f3ff' },
+            { id: 'education', label: 'EDUCATION', color: '#ff00aa' },
+            { id: 'experience', label: 'EXPERIENCE', color: '#ff9e00' },
+            { id: 'skills', label: 'SKILLS', color: '#00ff44' },
+            { id: 'research', label: 'RESEARCH', color: '#bc13fe' },
+            { id: 'hobbies', label: 'HOBBIES', color: '#ffff00' },
+            { id: 'contact', label: 'CONTACT', color: '#ffffff' }
+        ];
+
+        const interactiveObjects = [];
+
+        // Text Sprite Helper
+        function createTextSprite(text, color) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 512; canvas.height = 256;
+            ctx.font = 'bold 70px "Rajdhani"';
+            ctx.fillStyle = color;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.shadowColor = color;
+            ctx.shadowBlur = 20;
+            ctx.fillText(text, 256, 128);
+            const texture = new THREE.CanvasTexture(canvas);
+            const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: texture, transparent: true }));
+            sprite.scale.set(4, 2, 1);
+            return sprite;
+        }
+
+        // Distribute nodes in a circle
+        const radius = isMobile ? 6 : 8;
+        const angleStep = (Math.PI * 2) / nodeData.length;
+
+        nodeData.forEach((data, index) => {
+            const angle = index * angleStep;
+            const x = Math.cos(angle) * radius;
+            const z = Math.sin(angle) * radius;
+            const y = Math.sin(angle * 2) * 2; // Wave pattern for Y
+
+            const nodeContainer = new THREE.Group();
+            nodeContainer.position.set(x, y, z);
+            nodeContainer.userData = { id: data.id };
+
+            // Crystal
+            const geo = new THREE.OctahedronGeometry(0.6);
+            const mat = new THREE.MeshPhongMaterial({
+                color: 0x111111,
+                emissive: data.color,
+                emissiveIntensity: 0.5,
+                shininess: 100
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.userData = { isNode: true };
+            nodeContainer.add(mesh);
+
+            // Line to center
+            const points = [new THREE.Vector3(0, 0, 0), new THREE.Vector3(-x, -y, -z)];
+            const line = new THREE.Line(
+                new THREE.BufferGeometry().setFromPoints(points),
+                new THREE.LineBasicMaterial({ color: data.color, transparent: true, opacity: 0.15 })
+            );
+            nodeContainer.add(line);
+
+            // Label
+            const sprite = createTextSprite(data.label, data.color);
+            sprite.position.y = -1.2;
+            nodeContainer.add(sprite);
+
+            nodesGroup.add(nodeContainer);
+            interactiveObjects.push(mesh);
+        });
+
+        // 3. Stars
+        const starGeo = new THREE.BufferGeometry();
+        const starPos = new Float32Array(3000);
+        for (let i = 0; i < 3000; i++) starPos[i] = (Math.random() - 0.5) * 100;
+        starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+        scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.1 })));
+
+        // --- ANIMATION ---
+        let time = 0;
+        const mouse = new THREE.Vector2();
+        const raycaster = new THREE.Raycaster();
+        let hoveredNode = null;
+        let isModalOpen = false;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            time += 0.003;
+
+            if (!isModalOpen) {
+                coreGroup.rotation.x = time;
+                coreGroup.rotation.y = time * 0.5;
+                nodesGroup.rotation.y = time * 0.2; // Orbit
+
+                nodesGroup.children.forEach(child => {
+                    child.children[0].rotation.x += 0.02;
+                    child.children[0].rotation.y += 0.02;
+                    // Keep label facing camera
+                    // child.children[2].lookAt(camera.position); 
+                    // Actually sprites auto-face camera, but position needs to be steady relative to node
+                });
+            }
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // --- INTERACTION ---
+
+        // Mouse Move (Parallax & Hover)
+        document.addEventListener('mousemove', (e) => {
+            if (isModalOpen) return;
+            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+            gsap.to(camera.position, {
+                x: mouse.x * 2,
+                y: mouse.y * 2,
+                duration: 1
+            });
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(interactiveObjects);
+
+            if (intersects.length > 0) {
+                const object = intersects[0].object;
+                if (hoveredNode !== object) {
+                    document.body.style.cursor = 'pointer';
+                    gsap.to(object.scale, { x: 1.5, y: 1.5, z: 1.5, duration: 0.3 });
+                    gsap.to(object.material, { emissiveIntensity: 2, duration: 0.3 });
+                    hoveredNode = object;
+                }
+            } else if (hoveredNode) {
+                document.body.style.cursor = 'default';
+                gsap.to(hoveredNode.scale, { x: 1, y: 1, z: 1, duration: 0.3 });
+                gsap.to(hoveredNode.material, { emissiveIntensity: 0.5, duration: 0.3 });
+                hoveredNode = null;
+            }
+        });
+
+        // Handle Click (Works for Touch too)
+        window.addEventListener('click', (e) => {
+            if (isModalOpen) return;
+
+            // Update mouse coordinates for click
+            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(interactiveObjects);
+
+            if (intersects.length > 0) {
+                const id = intersects[0].object.parent.userData.id;
+                openModal(id);
+            }
+        });
+
+        window.openModal = (id) => {
+            isModalOpen = true;
+            const modal = document.getElementById(`modal-${id}`);
+            if (modal) {
+                modal.classList.add('active');
+                gsap.to(camera.position, { z: isMobile ? 8 : 5, duration: 1, ease: "power2.out" });
+                gsap.to(scene.fog, { density: 0.08, duration: 1 });
+            }
+        };
+
+        window.closeModal = () => {
+            const modals = document.querySelectorAll('.modal-overlay');
+            modals.forEach(m => m.classList.remove('active'));
+
+            gsap.to(camera.position, { z: isMobile ? 22 : 15, x: 0, y: 0, duration: 1.5, ease: "power2.inOut" });
+            gsap.to(scene.fog, { density: 0.02, duration: 1 });
+            setTimeout(() => { isModalOpen = false; }, 500);
+        };
+
+        window.addEventListener('resize', () => {
+            const newMobile = window.innerWidth < 768;
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            if (!isModalOpen) camera.position.z = newMobile ? 22 : 15;
+        });
+
+        window.onload = () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                loader.style.opacity = 0;
+                setTimeout(() => loader.style.display = 'none', 800);
+            }, 1500);
+        };
+
+    </script>
+</body>
+
 </html>
